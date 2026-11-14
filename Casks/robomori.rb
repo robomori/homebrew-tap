@@ -26,6 +26,12 @@ cask "robomori" do
                   executable: "#{appdir}/Robomori.app/Contents/MacOS/Robomori",
                   args:       ["cli"]
 
+  # On Intel Macs, Robomori's Settings → Command Line links the same command where Homebrew links its own.
+  preflight_steps do
+    remove "bin/robomori", base:                    :homebrew_prefix,
+                           symlink_target_contains: "Application Support/Robomori/bin/robomori"
+  end
+
   zap trash: [
     "~/Library/Application Support/Robomori",
     "~/Library/Caches/Robomori",
