@@ -1,9 +1,9 @@
 cask "robomori" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.10.1"
-  sha256 arm:   "fff05613ef5ce58fee04d04065a84491bbfd76f7b4c748f790f5ad2c0e7e743c",
-         intel: "110975fc65c7ed93d97082fc00e6f62595e557b5e03fd3864950a5cc5665f7d2"
+  version "1.10.2"
+  sha256 arm:   "3f107e8be01bfd41d7d9d69fdcb6630c19017d69f5522efefecd31728bfdbf35",
+         intel: "e1e7419cbe07dce27a020368f36b6c781ceb626c88f4eaa974f975827d3fcfb1"
 
   url "https://downloads.robomori.com/releases/#{version}/macos-#{arch}/robomori-#{version}-mac-#{arch}.dmg"
   name "Robomori"
